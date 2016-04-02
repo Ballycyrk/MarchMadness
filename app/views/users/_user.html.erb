@@ -1,0 +1,8 @@
+<li>
+  <%= link_to gravatar_for(user, size: 50), user %>
+  <%= link_to user.handle, user %>
+  <% if current_user.admin? && !current_user?(user) %>
+  | <%= link_to "Be Gone!", user, method: :delete,
+                                 data: { confirm: "Forever & Always?" } %>
+  <% end %>
+</li>

@@ -1,0 +1,8 @@
+Hello wound, here's some salt!
+
+<%= @user.first_name %>,
+
+Welcome to the new March Madness website.  Click the link below to activate your
+account and confirm that you know what you're getting yourself into.  Again.
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

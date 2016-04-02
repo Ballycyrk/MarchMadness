@@ -1,0 +1,58 @@
+colin:
+  handle: C-Note
+  first_name: Colin
+  last_name: McKenna
+  email: colin@emckenna.com
+  password_digest: <%= User.digest("password") %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+jesica:
+  handle: Board Walker
+  first_name: Jesica
+  last_name: Avellone
+  email: jesica@example.net
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+aine:
+  handle: Joshanabe
+  first_name: Aine
+  last_name: McKenna
+  email: aine@example.net
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+lucia:
+  handle: Sweet Lu
+  first_name: Lucia
+  last_name: McKenna
+  email: lucy@example.net
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+declan:
+  handle: Poof
+  first_name: Declan
+  last_name: NotIt
+  email: decky@example.net
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  handle: <%= "User #{n}" %>
+  first_name: Jake
+  last_name: Birmingham
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+<% end %>
+
+

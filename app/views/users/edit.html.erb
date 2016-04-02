@@ -1,0 +1,17 @@
+
+<% provide(:title, "#{@user.handle} settings") %>
+<h1>Indecisive eh?</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'fields', f: f %>
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+    <div class="gravitar_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails">Not so much</a>
+    </div>
+  </div>
+</div>

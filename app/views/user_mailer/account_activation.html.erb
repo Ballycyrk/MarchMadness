@@ -1,0 +1,12 @@
+<h1>Hello wound, here's some salt!</h1>
+
+<p><%= @user.first_name %>,</p>
+
+<p>Welcome to the new March Madness website.  Click the link below to activate
+your account and confirm that you know what you're getting yourself
+into...again.</p>
+
+<p>What could possibly go wrong? <%= link_to "Let's find out.",
+edit_account_activation_url(@user.activation_token, email: @user.email) %></p>
+
+
